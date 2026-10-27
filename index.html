@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <title>Remix Remix Sportfitness Para Todos</title>
+    <meta name="description" content="Plataforma web de alto rendimiento deportivo, análisis biomecánico, gestión de atletas y automatización de rutinas." />
+    <meta property="og:title" content="Remix Remix Sportfitness Para Todos" />
+    <meta property="og:description" content="Plataforma web de alto rendimiento deportivo, análisis biomecánico, gestión de atletas y automatización de rutinas." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Barlow+Condensed:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      // Gracefully ignore benign WebSocket / Vite HMR transport errors in the sandbox iframe environment
+      window.addEventListener('error', function(event) {
+        var msg = (event && event.message) ? String(event.message) : '';
+        if (msg.indexOf('WebSocket') !== -1 || msg.indexOf('createWebSocketModuleRunnerTransport') !== -1 || msg.indexOf('@vite/client') !== -1) {
+          event.preventDefault && event.preventDefault();
+          event.stopPropagation && event.stopPropagation();
+          return true;
+        }
+      }, true);
+      window.addEventListener('unhandledrejection', function(event) {
+        var reason = (event && event.reason) ? String(event.reason.stack || event.reason.message || event.reason) : '';
+        if (reason.indexOf('WebSocket') !== -1 || reason.indexOf('createWebSocketModuleRunnerTransport') !== -1 || reason.indexOf('@vite/client') !== -1) {
+          event.preventDefault && event.preventDefault();
+          event.stopPropagation && event.stopPropagation();
+          return true;
+        }
+      }, true);
+    </script>
+  </head>
+  <body class="bg-[#0B0C10] text-[#E0E0E0] antialiased selection:bg-[#56A867] selection:text-black min-h-screen font-sans">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
